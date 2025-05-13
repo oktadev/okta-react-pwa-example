@@ -11,7 +11,9 @@ const Home = () => {
 		<img src={logo} className="App-Logo" alt="Logo"/>
 		<div>
 			{!authState?.isAuthenticated && (
-				<button onClick={signin}>Sign In</button>
+				<>
+					<button onClick={signin}>Sign In</button>
+				</>
 			)}
 			{authState?.isAuthenticated && (
 				<button onClick={signout}>Sign Out</button>

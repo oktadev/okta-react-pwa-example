@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useOktaAuth } from "@okta/okta-react";
+import { IDToken, UserClaims } from "@okta/okta-auth-js";
 
 const Profile= () => {
 	const { authState, oktaAuth} = useOktaAuth();
-	const [userInfo, setUserInfo] = useState(null);
+	const [userInfo, setUserInfo] = useState<UserClaims | null>(null);
 
 	useEffect(() => {
 		if(!authState || !authState.isAuthenticated) setUserInfo(null);
-		else setUserInfo(authState.idToken.claims);
+		else setUserInfo((authState.idToken as IDToken).claims);
 	}, [authState, oktaAuth]);
 
 	return (userInfo) ? (

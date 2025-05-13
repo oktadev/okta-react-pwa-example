@@ -5,16 +5,16 @@ import Home from './Home';
 import Profile from './Profile';
 
 const oktaAuth = new OktaAuth({
-    clientId: import.meta.env.VITE_OKTA_DOMAIN,
-    issuer: `https://${import.meta.env.VITE_OKTA_DOMAIN}/oauth2/default`,
+    clientId: import.meta.env.VITE_OKTA_CLIENT_ID,
+    issuer: `https://${import.meta.env.VITE_OKTA_DOMAIN}`,
     redirectUri: window.location.origin + '/login/callback',
-    scopes: ['openid', 'profile', 'email', 'offline_access']
+    scopes: ['openid', 'profile', 'email', 'offline_access'],
 } as any) ;
 
 
 function App() {
     const history = useHistory();
-    const restoreOriginalUri = (_oktaAuth,  originalUri) => {
+    const restoreOriginalUri = (_oktaAuth: OktaAuth,  originalUri: string) => {
         history.replace(toRelativeUrl(originalUri || '/', window.location.origin));
     };
 
