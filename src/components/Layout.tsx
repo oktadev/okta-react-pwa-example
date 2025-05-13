@@ -1,6 +1,6 @@
 import './Layout.css';
 import { useOktaAuth } from "@okta/okta-react";
-import SignIn from "../pages/SignIn.tsx";
+import SignIn from "./SignIn.tsx";
 import { Link } from "react-router-dom";
 
 const Layout = ({children}) => {
