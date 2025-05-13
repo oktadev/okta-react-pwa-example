@@ -24,8 +24,8 @@ export default defineConfig({
         enabled: true
       },
       manifest: {
-        name: 'My Awesome App',
-        short_name: 'PWA App',
+        name: 'Lister',
+        short_name: 'lister',
         icons: manifestIcons,
       }
     })
