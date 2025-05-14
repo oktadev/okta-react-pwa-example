@@ -1,3 +1,4 @@
+import './Profile.css';
 import { useState, useEffect } from "react";
 import { useOktaAuth } from "@okta/okta-react";
 import { IDToken, UserClaims } from "@okta/okta-auth-js";
@@ -13,7 +14,7 @@ const Profile= () => {
 
 	return (userInfo) ? (
 		<div>
-			<div>
+			<div className="profile">
 				<h1>My User Profile (ID Token Claims)</h1>
 				<p>
 					Below is the information from your ID token which was obtained during the &nbsp;

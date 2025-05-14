@@ -9,7 +9,7 @@ const Layout = ({children}) => {
 
 	return authState?.isAuthenticated ? (<>
 		<div className="navbar">
-			<img src="/favicon-32x32.png" className="logo" />
+			<Link to="/"><img src="/favicon-32x32.png" className="logo" /></Link>
 
 			<div className="right">
 				<Link to="/profile">Profile</Link>

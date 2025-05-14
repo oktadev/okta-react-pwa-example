@@ -17,8 +17,7 @@
   display: flex;
 }
 /**Submit button styling**/
-input:not([type="submit"]):not([type="checkbox"]), form#lead_gen_form select {
-  color: #000;
+input:not([type="submit"]):not([type="checkbox"]), select, textarea {
   display: block;
   max-width: 100%;
   padding: 6px 12px;
@@ -34,3 +33,116 @@ input:not([type="submit"]):not([type="checkbox"]), form#lead_gen_form select {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   margin-bottom: 5px;
 }
+
+form input[type="submit"] {
+  display: block;
+  background-color: #213547;
+  box-shadow: 0 0 0 0 #213547;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border: none;
+  color: #fff;
+  font-size: .9em;
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+  margin: 15px 0 0 auto;
+  transition: background-color 250ms ease;
+  border-radius: 5px;
+}
+
+.tab {
+  max-width: 500px;
+  margin: auto;
+}
+
+form label {
+  text-align: left;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.tab-heading {
+  border-bottom: 1px solid #D9E4EEFF;
+}
+
+.tab-heading button{
+  width: 50%;
+}
+.tab-heading button:first-child{
+  text-align: right;
+}
+
+.tab-heading button:last-child{
+  text-align: left;
+}
+
+.tab-heading button:hover {
+  background: #dcdcdc;
+  border-radius: 0;
+}
+
+.tab-heading button.active{
+  background: rgba(217, 228, 238, 0.42);
+}
+
+.tab-heading button.active:first-child {
+  border-right: 1px solid rgba(217, 228, 238, 0.9);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.tab-heading button.active:last-child{
+  border-left: 1px solid rgba(217, 228, 238, 0.9);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.task-list {
+  list-style-type: none;
+}
+
+.task-list p.description {
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+
+.task-list li {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid rgba(217, 228, 238, 0.7);
+  padding: 5px 10px;
+}
+
+.task-list li .title-card {
+  display: flex;
+}
+
+.task-list li.done .title-card *:not(.expand){
+  text-decoration: line-through;
+}
+
+.task-list li:hover {
+  background: rgba(234, 243, 252, 0.59);
+}
+
+.task-list li input[type=checkbox] {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.task-list li p.name {
+  font-size: 1.2rem;
+}
+
+.task-list li p.expand {
+  color: #46617a;
+  font-size: 1rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+

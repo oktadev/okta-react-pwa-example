@@ -1,0 +1,21 @@
+td, th {
+  text-align: left;
+  padding: 1px 10px
+}
+
+td:first-child, th:first-child {
+  border-right: 1px solid #dcdcdc;
+
+}
+
+table {
+  max-width: 600px;
+}
+
+.profile {
+  margin: auto;
+}
+.profile h1, p {
+  text-align: left;
+  width: fit-content;
+}
