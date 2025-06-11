@@ -10,7 +10,7 @@ const oktaAuth = new OktaAuth({
     clientId: import.meta.env.VITE_OKTA_CLIENT_ID,
     issuer: `https://${import.meta.env.VITE_OKTA_DOMAIN}`,
     redirectUri: window.location.origin + '/login/callback',
-    scopes: ['openid', 'profile', 'email', 'offline_access'],
+    scopes: ['openid', 'profile', 'email',],
 } as any) ;
 
 

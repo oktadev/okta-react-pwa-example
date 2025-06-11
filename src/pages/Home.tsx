@@ -2,9 +2,9 @@ import './Home.css';
 import { useEffect, useState } from "react";
 import TaskModel, { Task } from "../models/Task.model.ts";
 
-const EMPTY_TASK: Task = {name: "", description: "", done: false} as const;
+const EMPTY_TASK: Task = { name: "", description: "", done: false } as const;
 const Home = () => {
-	const [tasks, setTasks] = useState<Task[]>(TaskModel.all());
+	const [tasks, setTasks] = useState<Task[]>(TaskModel.all().reverse());
 	const [addMode, setAddMode] = useState(false);
 	const [form, setForm] = useState<Task>(EMPTY_TASK);
 	const [expanded, setExpanded] = useState<boolean[]>(new Array(tasks.length).fill(false));
@@ -17,7 +17,7 @@ const Home = () => {
 	}
 	const addNewTask = (e) => {
 		e.preventDefault();
-		setExpanded(new Array(tasks.length+1).fill(false));
+		setExpanded(new Array(tasks.length + 1).fill(false));
 		setTasks([...tasks, form]);
 		setForm(EMPTY_TASK);
 		setAddMode(!addMode);
