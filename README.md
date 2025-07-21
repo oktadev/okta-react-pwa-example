@@ -88,4 +88,4 @@ Please post any questions as comments on the [blog post][blog], or visit our [Ok
 
 Apache 2.0, see [LICENSE](LICENSE).
 
-[blog]: https://developer.okta.com/blog/2025/07/23/react-pwa
+[blog]: https://developer.okta.com/blog/2025/07/22/react-pwa
